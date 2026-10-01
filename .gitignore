@@ -1,0 +1,6 @@
+twoja-praca/*
+!twoja-praca/.gitkeep
+.env
+*.yaml.local
+__pycache__/
+*.pyc
