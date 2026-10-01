@@ -95,7 +95,7 @@ Na koniec użytkownik ogląda zdjęcia sam. To on decyduje, czy produkt wygląda
 
 ## Co dalej
 
-Zdjęcie jest gotowe do reklamy. Wgranie do konta to narzędzie zapisu connectora, więc najpierw opisz, co wgrasz, i poczekaj na zgodę w osobnej wiadomości. Wszystko, co zbudujesz, powstaje wstrzymane, włącza użytkownik. Bez connectora użytkownik wgrywa zdjęcie sam w Menedżerze reklam.
+Zdjęcie jest gotowe do reklamy. Wgranie do konta to narzędzie zapisu connectora, więc tylko na poziomie dostępu 2 (`twoja-praca/<sklep>/sklep.md`). Najpierw opisz, co wgrasz, i poczekaj na zgodę w osobnej wiadomości. Wszystko, co zbudujesz, powstaje wstrzymane, włącza użytkownik. Bez connectora użytkownik wgrywa zdjęcie sam w Menedżerze reklam.
 
 ## Wynik
 

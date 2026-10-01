@@ -23,6 +23,10 @@ Powiedz to na początku, bo „AI buduje mi kampanię” brzmi niepokojąco:
 
 Każde narzędzie, które coś tworzy, wymaga zgody użytkownika. Najpierw pokaż plan budowy w całości, potem poproś o zgodę w osobnej wiadomości, potem buduj. Nigdy nie wywołuj `ads_activate_entity`.
 
+## Bramka: poziom dostępu
+
+Sprawdź w `twoja-praca/<sklep>/sklep.md`, czy jest poziom 2 ze zdaniem zgody dla tego konta. Jeśli nie, nic nie budujesz. Zapisz pełny plan kampanii w pliku planu, żeby użytkownik mógł go wyklikać sam, i zaproponuj przejście na poziom 2 według `procedury/sklep.md`.
+
 ## Lista przed budową
 
 Sprawdź przez connector albo zapytaj. Jeśli czegoś brakuje, zatrzymaj się i pomóż to naprawić. Inaczej budowa się wysypie albo kampania będzie zepsuta.

@@ -25,7 +25,7 @@ Nie wczytuj wszystkich dawnych przeglądów. Ostatni wystarczy.
 
 1. **15 minut, pobranie.** Okno, te same miary co zawsze.
 2. **15 minut, diagnoza.** Przejdź `procedury/diagnoza.md` i wróć z jednym wąskim gardłem.
-3. **15 minut, zmiana.** Jedna zmiana wobec tego wąskiego gardła. Jeśli to nowa reklama, zbuduj ją przez connector jako wstrzymaną.
+3. **15 minut, zmiana.** Jedna zmiana wobec tego wąskiego gardła. Jeśli to nowa reklama i profil ma poziom dostępu 2, zbuduj ją przez connector jako wstrzymaną. Na poziomie 1 przygotuj ją w pliku, a użytkownik doda ją sam.
 4. **15 minut, zatwierdzenie.** Pokaż, co przygotowałeś. Użytkownik ogląda i sam włącza.
 
 ## Cztery decyzje

@@ -22,8 +22,15 @@ Ostatnia aktualizacja: RRRR-MM-DD
 ## Połączenie
 
 - Tryb: connector / eksport
-- Konto reklamowe:
+- Konto reklamowe (nazwa i identyfikator):
 - Problemy:
+
+## Poziom dostępu
+
+- Poziom: 1 odczyt / 2 budowanie wyłączone
+- Data zgody:
+- Zdanie zgody (dokładnie, jak zostało wpisane):
+- Cofnięcie zgody (data):
 
 ## Okno przeglądu
 

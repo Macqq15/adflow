@@ -59,6 +59,8 @@ AI robi czarną robotę. Czyta, liczy, porównuje, pisze.
 
 Ty podejmujesz każdą decyzję, która kosztuje pieniądze. AI nigdy niczego nie włącza, nie podnosi budżetu działającej reklamy i nie rusza reklamy, która na siebie zarabia. Podaje Ci liczbę i mówi, gdzie kliknąć.
 
+Na start AI tylko czyta Twoje konto. Jeśli chcesz, żeby budowało kampanie, wpiszesz zgodę z nazwą swojego konta. Zgodę możesz cofnąć w każdej chwili, pisząc „cofam zgodę”.
+
 To, co AI zbuduje przez connector, powstaje wstrzymane. Nic nie wyda ani złotówki, dopóki sam tego nie włączysz w Menedżerze reklam.
 
 ## Najważniejsza zasada
