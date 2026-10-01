@@ -48,7 +48,8 @@ Bez connectora też da się pracować. Eksportujesz raport z Menedżera reklam i
 2. **Diagnoza.** AI czyta konto i nazywa jedno wąskie gardło, z liczbami, które na nie wskazują, i jedną zmianę do sprawdzenia.
 3. **Przegląd.** Raz na tydzień albo raz na cztery dni, zależnie od budżetu. Każda reklama dostaje jedną decyzję, czyli zostaw, wyłącz, skaluj albo odśwież.
 4. **Gdy przestało działać.** Osobna ścieżka dla reklamy albo sklepu, który sprzedawał i nagle przestał.
-5. **Zdjęcia do reklam.** Z prawdziwego zdjęcia produktu AI robi zdjęcie w scenie, na przykład kubek na kuchennym blacie. W ChatGPT albo Gemini wystarczy prompt, który przygotuje AdFlow. W Claude Code i Codex działa to automatycznie, ale wymaga własnego klucza Gemini, który wklejasz sam do pliku `.env`, nigdy do czatu.
+5. **Nowa kampania od zera.** Jeśli nie masz jeszcze reklam, AI zbierze zdania Twoich klientów z opinii i wiadomości, napisze z nich teksty reklam i zbuduje kampanię. Wszystko wyłączone, włączasz sam.
+6. **Zdjęcia do reklam.** Z prawdziwego zdjęcia produktu AI robi zdjęcie w scenie, na przykład kubek na kuchennym blacie. W ChatGPT albo Gemini wystarczy prompt, który przygotuje AdFlow. W Claude Code i Codex działa to automatycznie, ale wymaga własnego klucza Gemini, który wklejasz sam do pliku `.env`, nigdy do czatu.
 
 Wszystko, co AI przygotuje, ląduje w folderze `twoja-praca`. Następna rozmowa wie, na czym skończyliście.
 

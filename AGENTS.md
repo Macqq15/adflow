@@ -49,6 +49,7 @@ To, co tworzysz przez connector, powstaje wstrzymane. Tak działa connector, nie
 | `procedury/` | co robisz: profil sklepu, diagnoza, przegląd, gdy przestało działać |
 | `procedury/progi.md` | liczby, które rozstrzygają. czytaj je stąd, nie z pamięci |
 | `wiedza/` | głębsza wiedza o Mecie. spis w `wiedza/README.md`. czytasz tylko sekcję, do której odsyła procedura. przy sprzeczności wygrywa procedura |
+| `wzory/` | wzory otwarć i rdzeni reklam do pisania tekstów |
 | `narzedzia/` | jeden skrypt do zdjęć produktów (`zdjecie.py`), tylko w Claude Code i Codex |
 | `szablony/` | puste wzory. kopiuj je do `twoja-praca/`, nigdy nie wypełniaj w miejscu |
 | `twoja-praca/` | wszystko, co powstaje. jeden folder na sklep |
@@ -64,6 +65,9 @@ To, co tworzysz przez connector, powstaje wstrzymane. Tak działa connector, nie
 | „przegląd”, „co tydzień”, „co zmienić w tym tygodniu” | `procedury/przeglad.md` | ostatni plik w `twoja-praca/<sklep>/przeglady/` | resztę |
 | „sprzedaż spadła”, „przestało działać”, „reklama umarła” | `procedury/gdy-przestalo-dzialac.md` | `procedury/progi.md` | resztę |
 | „czy mogę podnieść budżet”, „skalować” | `procedury/progi.md`, sekcja Skalowanie | `twoja-praca/<sklep>/sklep.md` | resztę |
+| „nie mam jeszcze reklam”, „nowa kampania”, „chcę zacząć reklamy” | `procedury/kampania.md` | najpierw sprawdź, czy są `slowa-klientow.md`, plik reklam i zdjęcia. Brakuje? Zacznij od nich | `diagnoza.md`, `przeglad.md` |
+| „napisz reklamy”, „teksty”, „nagłówki” | `procedury/teksty.md` | `twoja-praca/<sklep>/slowa-klientow.md`, `wzory/` | resztę |
+| „słowa klientów”, „opinie”, „research” | `procedury/slowa-klientow.md` | nic | resztę |
 | „zdjęcia”, „zdjęcie produktu”, „kreacja”, „grafika do reklamy” | `procedury/zdjecia.md` | `twoja-praca/<sklep>/sklep.md` | resztę |
 | „faza nauki”, „learning limited” | `wiedza/knowledge-meta-domain.md` §2 | nic | resztę |
 | „piksel”, „CAPI”, „Meta nie widzi zakupów” | `wiedza/knowledge-pixel-capi.md` | nic | resztę |
