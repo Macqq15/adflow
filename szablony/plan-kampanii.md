@@ -16,13 +16,13 @@
 - [ ] strona na Facebooku:
 - [ ] piksel: (zakupy zapisane: )
 - [ ] strona produktu na telefonie:
-- [ ] dane reklamodawcy i płatnika dla UE
+- [ ] dane reklamodawcy i płatnika dla UE (nazwa do pól `dsa_beneficiary` i `dsa_payor`):
 
 ## Plan budowy
 
 - Kampania:
 - Zestaw Szeroki: kraje, wiek
-- Zestaw Wąski: zainteresowania (wyszukane przez connector)
+- Zestaw Wąski: zainteresowania (dodaje użytkownik w Menedżerze reklam, duplikując Szeroki)
 - Reklamy: (te same w obu zestawach)
 - Adres docelowy z UTM:
 

@@ -28,11 +28,11 @@ Każde narzędzie, które coś tworzy, wymaga zgody użytkownika. Najpierw poka�
 Sprawdź przez connector albo zapytaj. Jeśli czegoś brakuje, zatrzymaj się i pomóż to naprawić. Inaczej budowa się wysypie albo kampania będzie zepsuta.
 
 - [ ] **Konto reklamowe ma metodę płatności** (`ads_get_ad_accounts`, pole `has_payment_method`).
-- [ ] **Jest strona na Facebooku** podpięta do konta (`ads_get_ad_account_pages`).
+- [ ] **Jest strona na Facebooku** podpięta do konta (`ads_get_ad_account_pages`). Bez strony nie powstanie żadna kreacja ani reklama, zbudujesz najwyżej kampanię i zestaw.
 - [ ] **Jest piksel, czyli zbiór danych, i widzi zakupy** (`ads_get_datasets`, `ads_get_dataset_stats`). Zdarzenie zakupu ma się wywoływać na stronie podziękowania, a nie w koszyku. Bez piksela Meta nie przyjmie zestawu nastawionego na sprzedaż. Szczegóły w `wiedza/knowledge-pixel-capi.md`.
 - [ ] **Ile zakupów piksel już zapisał.** To wpływa na kierowanie niżej.
 - [ ] **Strona produktu ładuje się na telefonie** i obiecuje to samo co reklamy.
-- [ ] **Dane reklamodawcy i płatnika dla UE są uzupełnione.** Reklamy w UE wymagają podania, kto się reklamuje i kto płaci. Jeśli budowa zestawu zwraca błąd o reklamodawcy albo płatniku, sprawdź w ustawieniach konta sekcję przejrzystości reklam (Ad transparency) i to, czy nie jest zaznaczone, że reklamodawca i płatnik to różne podmioty bez uzupełnionego płatnika. Komunikat błędu potrafi wskazywać zupełnie inne miejsce niż przyczyna.
+- [ ] **Dane reklamodawcy i płatnika dla UE.** Reklamy w UE wymagają podania, kto się reklamuje i kto płaci. Zapytaj o pełną nazwę firmy (albo imię i nazwisko przy jednoosobowej działalności) i przekaż ją przy tworzeniu zestawu w polach `dsa_beneficiary` (reklamodawca) i `dsa_payor` (płatnik). Bez nich Meta odrzuca zestaw błędem „No advertiser indicated”. Jeśli budowa zestawu zwraca błąd o reklamodawcy albo płatniku, sprawdź w ustawieniach konta sekcję przejrzystości reklam (Ad transparency) i to, czy nie jest zaznaczone, że reklamodawca i płatnik to różne podmioty bez uzupełnionego płatnika. Komunikat błędu potrafi wskazywać zupełnie inne miejsce niż przyczyna.
 
 ## Plan testu, ustalony przed budową
 
@@ -60,24 +60,25 @@ Jeśli cel to zapis na listę zamiast zakupu, próg zapisu zastępuje próg rent
 
 - Cel: Sprzedaż (`OUTCOME_SALES`).
 - Budżet na poziomie kampanii, żeby Meta przesuwała pieniądze do lepszego zestawu.
-- Budżet łączny równy budżetowi rundy i limit wydatków kampanii na tę samą kwotę, żeby nie dało się wydać więcej.
-- Data startu i końca równa oknu testu.
+- Budżet łączny (`campaign_lifetime_budget`) równy budżetowi rundy. Sam w sobie ogranicza wydatki do tej kwoty.
+- Limit wydatków kampanii (`campaign_spend_cap`) na tę samą kwotę tylko wtedy, gdy Meta go przyjmie. Ma minimum zależne od waluty (w koronach czeskich 2000), więc przy małym budżecie rundy pomiń go, budżet łączny wystarczy.
+- Data startu i końca równa oknu testu. Te same daty podajesz potem w każdym zestawie (`start_time`, `end_time`), bo przy budżecie łącznym zestaw bez daty końca zostanie odrzucony.
 - Kwoty connector przyjmuje w groszach waluty konta, 240 zł to 24000. Sprawdź walutę konta i pokaż kwotę w złotych.
 
 **Dwa zestawy reklam** w tej kampanii.
 
 | Ustawienie | Szeroki | Wąski |
 | --- | --- | --- |
-| Zainteresowania | brak | 2 lub 3 duże zainteresowania |
+| Zainteresowania | brak | 2 lub 3 duże zainteresowania, dodane przez użytkownika (niżej) |
 | Kraje | gdzie sklep wysyła, najczęściej tylko Polska | identycznie jak w Szerokim |
 | Wiek | 18 do 65, chyba że produkt wymaga innego | identycznie |
 | Optymalizacja | zakup, z pikselem jako obiektem promowanym | identycznie |
 | Umiejscowienia | automatyczne (Advantage+) | identycznie |
 
 - **Oba zestawy mają identyczne kraje, wiek i optymalizację.** Różnią się tylko zainteresowaniami. Inaczej porównanie nic nie mówi.
-- **Nigdy nie wymyślaj identyfikatora zainteresowania.** Wyszukaj je po nazwie przez connector i użyj dokładnie tego, co wróci. Zmyślone identyfikatory są odrzucane albo, co gorsze, kierują do złych ludzi.
+- **Connector nie ma wyszukiwarki zainteresowań, a identyfikatorów nigdy nie wymyślasz.** Dlatego przez connector budujesz tylko zestaw Szeroki. Zestaw Wąski użytkownik robi sam w Menedżerze reklam: duplikuje zestaw Szeroki, w sekcji grupy odbiorców dodaje 2 lub 3 zainteresowania i zmienia nazwę. Podaj mu propozycje zainteresowań i dokładne kroki. Jeśli użytkownik nie chce tego robić, zostaje sam Szeroki, który i tak zwykle wygrywa.
 - **Duże zainteresowania.** Wąski zestaw może mieć kilka milionów osób zasięgu w Polsce i to jest w porządku. Wybieraj zainteresowania tego, kim klient jest, a nie tego, kim chciałby być.
-- **Advantage+ Audience** jest domyślnie włączone. Wtedy wiek jest sugestią, a nie limitem. W Szerokim to zwykle dobrze. Jeśli produkt wymaga twardego limitu wieku, trzeba to wyłączyć.
+- **Advantage+ Audience** jest domyślnie włączone i connector sam zamienia podany wiek na sugestię. Wtedy wiek nie jest limitem. W Szerokim to zwykle dobrze. Jeśli produkt wymaga twardego limitu wieku, trzeba to wyłączyć.
 - Przy wysyłce za granicę pamiętaj o dopłatach lokalizacyjnych w części krajów (`wiedza/knowledge-meta-domain.md` §15c).
 
 **Kreacje.** Wgraj zdjęcia (narzędzia wgrywania obrazów connectora), potem zbuduj kreację dla każdej reklamy: strona na Facebooku, adres docelowy z parametrami UTM (niżej), tekst główny, nagłówek i opis. Teksty bierzesz z pliku reklam bez żadnych zmian i bez notatek.
@@ -112,9 +113,9 @@ SPRZEDAŻ - Kawa ziarnista
 
 1. Pokaż plan budowy: kampania, dwa zestawy, ile kreacji i reklam, kwoty w złotych. Poczekaj na zgodę.
 2. Utwórz kampanię.
-3. Utwórz oba zestawy. Zainteresowania wyszukaj wcześniej.
+3. Utwórz zestaw Szeroki z datami startu i końca kampanii, pikselem jako obiektem promowanym (`{"pixel_id":"…","custom_event_type":"PURCHASE"}`), `destination_type` WEBSITE i polami reklamodawcy i płatnika.
 4. Wgraj zdjęcia, utwórz kreacje.
-5. Utwórz reklamy w obu zestawach na tych samych kreacjach.
+5. Utwórz reklamy w zestawie Szeroki. Gdy użytkownik zrobi zestaw Wąski przez duplikację, reklamy skopiują się razem z nim.
 6. Odczytaj wszystko z powrotem (`ads_get_ad_entities`) i sprawdź, czy liczby, nazwy i linki się zgadzają.
 
 Jeśli którekolwiek wywołanie zwróci błąd, przeczytaj treść błędu i napraw przyczynę. Nie ponawiaj na ślepo i nie zostawiaj kampanii zbudowanej do połowy bez słowa. Powiedz, co powstało, a czego brakuje.
@@ -123,7 +124,7 @@ Jeśli którekolwiek wywołanie zwróci błąd, przeczytaj treść błędu i nap
 
 Powiedz zwykłymi słowami, nie listą identyfikatorów:
 
-1. Co powstało: nazwa kampanii, nazwy dwóch zestawów, ile reklam.
+1. Co powstało: nazwa kampanii, zestaw Szeroki, ile reklam. Plus instrukcja, jak dodać zestaw Wąski.
 2. Że wszystko jest wyłączone.
 3. Ile to kosztuje po włączeniu: budżet rundy i okno.
 4. Co sprawdzić przed włączeniem: podgląd reklam, czy link prowadzi tam, gdzie trzeba, czy budżet się zgadza.
