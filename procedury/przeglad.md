@@ -33,7 +33,7 @@ Nie wczytuj wszystkich dawnych przeglądów. Ostatni wystarczy.
 Każde okno kończy się dokładnie jedną z nich dla każdej reklamy:
 
 - **Zostaw.** Działa. Nie ruszaj.
-- **Wyłącz.** Miała uczciwy test i przegrała, według reguł z `progi.md`.
+- **Wyłącz.** Miała uczciwy test i przegrała, według reguł z `progi.md`. Na poziomie dostępu 3 wstrzymujesz ją po potwierdzeniu, na niższych robi to użytkownik.
 - **Skaluj.** Wygrywa i ma miejsce, żeby rosnąć. Zasada skalowania w `progi.md`.
 - **Odśwież.** Działała i słabnie. Ten sam kąt, nowe wykonanie: nowy początek tekstu, nowe pierwsze sekundy wideo, nowe zdjęcie.
 

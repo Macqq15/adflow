@@ -35,7 +35,7 @@ Każdą ocenę kosztu zakupu i ROAS robisz względem tych dwóch liczb. Bez nich
 | reklama wydała 2 × próg rentowności kosztu zakupu i nie ma ani jednego zakupu | wyłącz reklamę |
 | nowa kampania wydała 3 × próg rentowności kosztu zakupu i nie ma ani jednego zakupu | koniec tej rundy |
 
-Wyłączenie to zawsze kliknięcie użytkownika. Ty mówisz, co i dlaczego.
+Wyłączenie robi użytkownik. Ty mówisz, co i dlaczego. Na poziomie dostępu 3 możesz wstrzymać reklamę sam, po jego potwierdzeniu, według kroków w `procedury/sklep.md`.
 
 **Koniec rundy to nie koniec produktu.** Przed zamknięciem tematu zrób do trzech rund. Między rundami zmieniaj stronę produktu albo ofertę (zestaw, próg darmowej dostawy, cena, gwarancja), a reklamy zostaw. Druga albo trzecia runda często pokazuje zwycięzcę.
 

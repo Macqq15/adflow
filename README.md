@@ -23,7 +23,7 @@ Działa w aplikacji Claude albo ChatGPT na komputerze, w Claude Code i w Codex. 
 
 ## Bezpieczeństwo
 
-AI niczego nie włącza, nie podnosi budżetu działającej reklamy i nie rusza reklamy, która zarabia. To, co zbuduje przez connector, powstaje wstrzymane i włączasz to sam w Menedżerze reklam. W ustawieniach firmy w Mecie możesz dodatkowo zostawić connectorowi samo czytanie.
+AI niczego nie włącza, nie podnosi budżetu działającej reklamy i nie rusza reklamy, która zarabia. Na start tylko czyta konto. Budowanie wyłączonych kampanii i wstrzymywanie przegranych reklam wymagają osobnych zgód z nazwą konta. To, co zbuduje przez connector, powstaje wstrzymane i włączasz to sam w Menedżerze reklam. W ustawieniach firmy w Mecie możesz dodatkowo zostawić connectorowi samo czytanie.
 
 ## Status
 

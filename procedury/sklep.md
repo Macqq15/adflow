@@ -41,11 +41,17 @@ Zapytaj o to dopiero po podłączeniu connectora, jednym prostym pytaniem: czy A
 
 **Poziom 2, budowanie wyłączone.** Możesz tworzyć kampanie, zestawy, kreacje i reklamy oraz wgrywać zdjęcia. Wszystko powstaje wyłączone.
 
-**Nigdy, na żadnym poziomie:** włączanie czegokolwiek, zmiana budżetu albo ustawień działającej kampanii, zestawu czy reklamy, usuwanie. To użytkownik robi zawsze sam w Menedżerze reklam. Powiedz to wprost, zanim zapytasz o poziom.
+**Poziom 3, budowanie i wstrzymywanie przegranych.** Wszystko z poziomu 2, a do tego możesz wstrzymać reklamę, która przekroczyła regułę wyłączania z `procedury/progi.md`. Tylko wstrzymanie reklamy, nigdy zestawu ani kampanii. Każde wstrzymanie po osobnym potwierdzeniu.
+
+**Nigdy, na żadnym poziomie:** włączanie czegokolwiek, zmiana budżetu albo innych ustawień działającej kampanii, zestawu czy reklamy, usuwanie. To użytkownik robi zawsze sam w Menedżerze reklam. Powiedz to wprost, zanim zapytasz o poziom.
 
 Żeby przejść na poziom 2, użytkownik przepisuje zdanie z dokładną nazwą konta reklamowego, którą pokazał connector:
 
 > Zgadzam się, żeby AdFlow tworzył wyłączone kampanie na koncie <nazwa konta>.
+
+Żeby przejść na poziom 3, przepisuje drugie zdanie:
+
+> Zgadzam się, żeby AdFlow wstrzymywał przegrane reklamy na koncie <nazwa konta>.
 
 Samo „tak” albo „ok” nie wystarcza. Jeśli nazwa konta w zdaniu nie zgadza się z kontem, które widzisz, zatrzymaj się i zapytaj, o które konto chodzi.
 
@@ -60,6 +66,15 @@ Potem pomóż ustawić blokady po stronie narzędzi, bo zdanie w czacie nie jest
 Zgodę można cofnąć słowami „cofam zgodę”. Wtedy wracasz na poziom 1 i zapisujesz to w profilu z datą.
 
 Nawet na poziomie 2 każda budowa wymaga osobnego potwierdzenia: pokazujesz plan z kwotami, użytkownik odpisuje „buduj” w osobnej wiadomości.
+
+Na poziomie 3, zanim wstrzymasz reklamę:
+
+1. Sprawdź regułę wyłączania w `procedury/progi.md` na liczbach z całego okna, nie z jednego dnia.
+2. Sprawdź zakupy tej reklamy w sklepie (parametr UTM), nie tylko w Mecie. Meta często nie widzi części zakupów. Jeśli śledzenie jest wąskim gardłem z diagnozy, nie wstrzymujesz niczego.
+3. Nigdy nie wstrzymuj reklamy kontrolnej ani reklamy, która jest najlepsza w swoim zestawie.
+4. Pokaż nazwę reklamy, wydatki, zakupy w Mecie i w sklepie oraz regułę, którą przekroczyła. Użytkownik odpisuje „wstrzymaj” w osobnej wiadomości.
+5. Wstrzymujesz przez `ads_update_entity` na poziomie reklamy, zmieniając tylko pole `status` na `PAUSED`. Żadnych innych pól w tym samym wywołaniu.
+6. Odczytaj reklamę z powrotem i zapisz w pliku przeglądu, co wstrzymałeś i dlaczego.
 
 ## Dalej
 

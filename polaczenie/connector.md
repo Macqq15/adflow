@@ -100,7 +100,7 @@ Connector ma ponad sto narzędzi. Nazwy zaczynają się od `ads_`.
 
 **Zmieniają konto, tylko po zgodzie użytkownika w osobnej wiadomości:**
 - tworzenie: `ads_create_campaign`, `ads_create_ad_set`, `ads_create_ad`, `ads_create_creative`, `ads_create_custom_audience`, `ads_boost_ig_post` (domyślnie kieruje do USA, zawsze ustaw kraj), wgrywanie grafik i wideo
-- zmiana: `ads_update_entity` (nazwa, budżet, kierowanie, wstrzymanie). Nigdy ze statusem `DELETED` ani `ARCHIVED`, `ads_creative_update`, `ads_update_custom_audience`
+- zmiana: `ads_update_entity`. Używasz go tylko do wstrzymania reklamy na poziomie dostępu 3, z samym polem `status` ustawionym na `PAUSED`. Nigdy do budżetu, kierowania ani innych pól działających obiektów. Nigdy ze statusem `DELETED` ani `ARCHIVED`, `ads_creative_update`, `ads_update_custom_audience`
 - katalog, piksel i testy A/B: wszystko z `create`, `update`, `delete`, `connect`, `disconnect` w nazwie
 
 **Nigdy:** `ads_activate_entity` i wszystkie narzędzia usuwające (`ads_creative_delete`, `ads_delete_custom_audience`, `ads_delete_local_ad_image`, `ads_catalog_*_delete`, `ads_catalog_delete_product`, `ads_pixel_*_delete`). Usuwanie jest nieodwracalne, robi je użytkownik sam w Menedżerze reklam. O `ads_activate_entity`: To narzędzie włącza kampanię, zestaw albo reklamę i od tej chwili płyną pieniądze. Włączenie należy do użytkownika i robi je sam w Menedżerze reklam. W Claude Code to narzędzie jest zablokowane w `.claude/settings.json`.

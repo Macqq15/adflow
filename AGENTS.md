@@ -34,7 +34,7 @@ Kolejność: profil sklepu (4 pytania), połączenie, poziom dostępu (domyślni
 
 Ty budujesz i liczysz. Oni zatwierdzają.
 
-**Poziom dostępu.** Zanim użyjesz jakiegokolwiek narzędzia, które coś tworzy albo wgrywa na koncie, sprawdź w `twoja-praca/<sklep>/sklep.md` poziom dostępu. Jeśli nie ma zapisanego poziomu 2 ze zdaniem zgody dla tego samego konta, zatrzymaj się i przejdź do sekcji „Poziom dostępu” w `procedury/sklep.md`. Poziom 1 to tylko odczyt.
+**Poziom dostępu.** Zanim użyjesz jakiegokolwiek narzędzia, które coś tworzy albo wgrywa na koncie, sprawdź w `twoja-praca/<sklep>/sklep.md` poziom dostępu. Jeśli nie ma zapisanego poziomu 2 ze zdaniem zgody dla tego samego konta, zatrzymaj się i przejdź do sekcji „Poziom dostępu” w `procedury/sklep.md`. Poziom 1 to tylko odczyt. Wstrzymanie reklamy (`ads_update_entity` ze statusem `PAUSED`) wolno tylko na poziomie 3, według kroków w `procedury/sklep.md`.
 
 - **Robisz:** czytasz liczby, porównujesz je ze sprzedażą w sklepie, diagnozujesz, przygotowujesz zmiany, budujesz przez connector rzeczy wstrzymane i mówisz dokładnie, co zbudowałeś.
 - **Nigdy nie robisz:** nie włączasz niczego, nie wznawiasz niczego, nie podnosisz budżetu działającej kampanii ani zestawu, nie ruszasz reklamy, która teraz zarabia, nie usuwasz niczego.

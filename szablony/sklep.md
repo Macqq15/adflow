@@ -27,9 +27,10 @@ Ostatnia aktualizacja: RRRR-MM-DD
 
 ## Poziom dostępu
 
-- Poziom: 1 odczyt / 2 budowanie wyłączone
+- Poziom: 1 odczyt / 2 budowanie wyłączone / 3 budowanie i wstrzymywanie przegranych
 - Data zgody:
 - Zdanie zgody (dokładnie, jak zostało wpisane):
+- Zdanie zgody na wstrzymywanie (poziom 3):
 - Cofnięcie zgody (data):
 
 ## Okno przeglądu
